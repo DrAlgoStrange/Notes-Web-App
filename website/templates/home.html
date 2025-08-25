@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block title %}Your Notes{% endblock %}
+
+
+{% block nav %}
+    <nav class="navbar sticky-top bg-primary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='note-svgrepo-com.svg') }}" alt="Bootstrap" width="30" height="24" style="background-color: rgb(241, 237, 237);"> Your Notes
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 75%;">
+              <li class="nav-item px-2">
+                <button type="button" class="btn btn-success" onclick="location.href='/auth/logout'">Logout</button>
+              </li>
+            </div>
+        </div>
+      </nav>
+{% endblock %}
+
+
+  
+{% block container %}
+<br>
+  <br>
+<figure class="text-center">
+    <blockquote class="blockquote">
+      <p>Notes are the footprints of thought, proof that the mind has wandered and dared to explore.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      By ChatGPT 
+    </figcaption>
+  </figure>
+  <br>
+  <br>
+  <h1>Notes</h1>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %} <!-- user notes is a list of notes ids coreated by a user -->
+    <li class="list-group-item">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div>
+      <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+  </form>  
+{% endblock %}

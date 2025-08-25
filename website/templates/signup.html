@@ -1,0 +1,52 @@
+{% extends "base.html" %} 
+
+
+{% block title %}SignUp{% endblock %}
+
+
+{% block nav %}
+    <nav class="navbar sticky-top bg-primary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='note-svgrepo-com.svg') }}" alt="Bootstrap" width="30" height="24" style="background-color: rgb(241, 237, 237);"> Your Notes
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 75%;">
+              <li class="nav-item px-2">
+                <a class="nav-link active" aria-current="page" href="/auth/login">Login</a>
+              </li>
+              <li class="nav-item px-2">
+                <button type="button" class="btn btn-success" onclick="location.href='/auth/signup'">SignUp</button>
+              </li>
+            </div>
+        </div>
+      </nav>
+{% endblock %}
+
+{% block container %}
+<div style="display:flex; width:100%; justify-content:center; "><h1>Sign UP</h1><br><br><br></div>
+
+<form method="POST">
+    <h3>Create a new account</h3>
+    <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="Name" class="form-control" id="name" name="name" placeholder="Enter your full Name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="JohnDoe@gmail.com" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password1" placeholder="Choose a password with 8 to 12 character no special character allowed ('~,',:,*,<,>)">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" name="password2" placeholder="Confirm Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
