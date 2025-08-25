@@ -104,19 +104,23 @@ Follow these step-by-step instructions to set up the Notes App on your local mac
 ## 📸 Screenshots
 
 ### 🔑 Login Page
-![Login Page](./screenshots/login-page.png)
+<img width="1435" height="779" alt="image" src="https://github.com/user-attachments/assets/70300d75-dd57-4206-813b-afc7bb672622" />
+
 *Secure login interface with email and password validation*
 
 ### 📝 Registration Page
-![Signup Page](./screenshots/signup-page.png)
+<img width="1419" height="778" alt="image" src="https://github.com/user-attachments/assets/3ba85e70-6828-4e17-a2fb-74f18e2c1bd3" />
+
 *User registration with password confirmation and validation*
 
 ### 🏠 Home Dashboard
-![Home Page](./screenshots/home-page.png)
+<img width="1433" height="773" alt="image" src="https://github.com/user-attachments/assets/673e2f32-0df3-4d34-b192-33221e1ada35" />
+
 *Main dashboard showing user notes with create and delete functionality*
 
 ### ✅ Note Creation
-![Note Creation](./screenshots/note-creation.png)
+<img width="1437" height="782" alt="image" src="https://github.com/user-attachments/assets/89bdfc84-7828-452f-93ce-54e485dfdf1e" />
+
 *Creating a new note with real-time feedback*
 
 
